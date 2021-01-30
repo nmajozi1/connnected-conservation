@@ -3,13 +3,17 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { GenericService } from './generic.service';
 import { Chart } from 'angular-highcharts';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HighChartService {
 
-  constructor(private genericService: GenericService) { }
+  constructor(
+    private genericService: GenericService,
+    public router: Router,
+    ) { }
 
   provinces: any = [];
   combined: any = [];
@@ -75,6 +79,14 @@ export class HighChartService {
           borderRadius: 5,
           center: ['50%', '75%'],
           size: 500
+        },
+        series: {
+          events: {
+            click: function(event) {
+              console.log(`%c An event has been clicked: ${event}`, 'color: red; font-weight: bold;');
+              location.href = 'http://localhost:4200/#/chart-drill-down';
+            }
+          }
         }
       },
       credits: {

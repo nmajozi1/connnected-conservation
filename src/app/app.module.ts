@@ -14,6 +14,8 @@ import { MatCardModule } from '@angular/material';
 import { LostRhinoChartComponent } from './lost-rhino-chart/lost-rhino-chart.component';
 import { PoacherTracksComponent } from './poacher-tracks/poacher-tracks.component';
 import { SuspectsNeutralisedComponent } from './suspects-neutralised/suspects-neutralised.component';
+import { FundTrackerComponent } from './fund-tracker/fund-tracker.component';
+import { ChartDrillDownComponent } from './chart-drill-down/chart-drill-down.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SuspectsNeutralisedComponent } from './suspects-neutralised/suspects-ne
     ColumnChartComponent,
     LostRhinoChartComponent,
     PoacherTracksComponent,
-    SuspectsNeutralisedComponent
+    SuspectsNeutralisedComponent,
+    FundTrackerComponent,
+    ChartDrillDownComponent
   ],
   imports: [
     BrowserModule,
