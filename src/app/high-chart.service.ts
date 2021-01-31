@@ -81,10 +81,11 @@ export class HighChartService {
           size: 500
         },
         series: {
-          events: {
-            click: function(event) {
-              console.log(`%c An event has been clicked: ${event}`, 'color: red; font-weight: bold;');
-              location.href = 'http://localhost:4200/#/chart-drill-down';
+          point: {
+            events: {
+                click: function () {
+                    location.href = `${location.origin}/#/chart-drill-down?category=${this.category}&y-axis=${this.y}`;
+                }
             }
           }
         }

@@ -16,6 +16,7 @@ import { PoacherTracksComponent } from './poacher-tracks/poacher-tracks.componen
 import { SuspectsNeutralisedComponent } from './suspects-neutralised/suspects-neutralised.component';
 import { FundTrackerComponent } from './fund-tracker/fund-tracker.component';
 import { ChartDrillDownComponent } from './chart-drill-down/chart-drill-down.component';
+import { RhinoTableComponent } from './rhino-table/rhino-table.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ChartDrillDownComponent } from './chart-drill-down/chart-drill-down.com
     PoacherTracksComponent,
     SuspectsNeutralisedComponent,
     FundTrackerComponent,
-    ChartDrillDownComponent
+    ChartDrillDownComponent,
+    RhinoTableComponent
   ],
   imports: [
     BrowserModule,
